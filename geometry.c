@@ -85,6 +85,7 @@ double coord_2d_area_triangle(const coord_2d_t *a, const coord_2d_t *b, const co
     }
     /* Maths */
     double area = ((a->x * (b->y - c->y)) + (b->x * (c->y - a->y)) + (c->x * (a->y - b->y)))/2;
-    if (area < 0){ area = -area; }
+    if (area < 0)
+        { area = -area; }
     return area;
 }
